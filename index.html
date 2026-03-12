@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ob1ch | Frontend Developer</title>
+  <meta
+    name="description"
+    content="Портфолио фронтенд-разработчика: лендинги для малого бизнеса, адаптивная верстка, HTML, CSS, JavaScript."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="logo">Ob<span>1ch</span></a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge">Frontend Developer • HTML / CSS / JavaScript</span>
+          <h1>Делаю <span>лендинги</span> для малого бизнеса</h1>
+          <p>
+            Создаю современные адаптивные сайты-визитки и лендинги,
+            которые помогают бизнесу красиво выглядеть в интернете и получать заявки.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn">Смотреть проекты</a>
+            <a href="#contact" class="btn btn-secondary">Связаться со мной</a>
+          </div>
+
+          <div class="hero-tags">
+            <span>Адаптивная верстка</span>
+            <span>Landing Page</span>
+            <span>Чистый код</span>
+            <span>Быстрая разработка</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="images/profile" alt="Фото разработчика" class="hero-image" />
+
+          <div class="hero-card-info">
+            <h3>Ob1ch</h3>
+            <p>Frontend Developer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">Обо мне</h2>
+        <p class="section-subtitle">
+          Я начинающий фронтенд-разработчик. Специализируюсь на создании
+          лендингов и сайтов-визиток для малого бизнеса, личных брендов и услуг.
+          Делаю аккуратную адаптивную верстку, понятную структуру и современный дизайн.
+        </p>
+
+        <div class="about-grid">
+          <article class="card">
+            <h3>Что я делаю</h3>
+            <p>
+              Верстаю сайты по макету или с нуля. Собираю понятные блоки,
+              делаю адаптив под телефон, планшет и компьютер.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>С чем работаю</h3>
+            <p>
+              HTML, CSS, JavaScript, Flexbox, Grid, адаптивная верстка,
+              базовые анимации, формы, секции для продаж и заявок.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Для кого</h3>
+            <p>
+              Для фотографов, репетиторов, мастеров, кофеен, локального бизнеса,
+              экспертов и всех, кому нужен красивый сайт без лишней драмы.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Проекты</h2>
+        <p class="section-subtitle">
+          Здесь мои работы. Ниже уже есть карточки под проекты, тебе остается только
+          заменить текст, картинки и ссылки. Вершина человеческой цивилизации.
+        </p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <!-- ВСТАВЬ СЮДА ПРЕВЬЮ ПЕРВОГО ПРОЕКТА -->
+            <!-- Пример: images/project-1.jpg -->
+            <img src="images/photo.jpg" alt="Превью проекта Photographer" class="project-image" />
+            <div class="project-content">
+              <span class="project-tag">Landing Page</span>
+              <h3>Сайт фотографа</h3>
+              <p>
+                Лендинг для фотографа с блоком услуг, портфолио, отзывами и формой заявки.
+              </p>
+              <div class="project-links">
+                <a href="https://rkdev2007.github.io/photo-man/" target="_blank">Live Demo</a>
+                <a href="https://github.com/RKDEV2007/photo-man.git" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <!-- ВСТАВЬ СЮДА ПРЕВЬЮ ВТОРОГО ПРОЕКТА -->
+            <img src="images/kofee.jpg" alt="Превью проекта Coffee Shop" class="project-image" />
+            <div class="project-content">
+              <span class="project-tag">Business Website</span>
+              <h3>Сайт кофейни</h3>
+              <p>
+                Современный сайт для кофейни с меню, галереей, описанием и блоком контактов.
+              </p>
+              <div class="project-links">
+                <a href="https://rkdev2007.github.io/coffee-shop/" target="_blank">Live Demo</a>
+                <a href="https://github.com/RKDEV2007/coffee-shop.git" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <!-- ВСТАВЬ СЮДА ПРЕВЬЮ ТРЕТЬЕГО ПРОЕКТА -->
+            <img src="images/tutor.jpg" alt="Превью проекта Tutor" class="project-image" />
+            <div class="project-content">
+              <span class="project-tag">Personal Website</span>
+              <h3>Сайт репетитора</h3>
+              <p>
+                Лендинг для репетитора с описанием занятий, преимуществами, отзывами и кнопкой записи.
+              </p>
+              <div class="project-links">
+                <a href="https://rkdev2007.github.io/tutor-school/" target="_blank">Live Demo</a>
+                <a href="https://github.com/RKDEV2007/tutor-school.git" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- КАК ДОБАВИТЬ ЕЩЕ ПРОЕКТЫ -->
+          <!--
+            1) Скопируй целиком один <article class="project-card"> ... </article>
+            2) Вставь его ниже
+            3) Замени картинку, заголовок, описание и ссылки
+            4) Готово
+          -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">Услуги</h2>
+        <p class="section-subtitle">
+          Базовые услуги, которые можно продавать уже сейчас.
+        </p>
+
+        <div class="services-grid">
+          <article class="card service-card">
+            <h3>Лендинг для бизнеса</h3>
+            <p>
+              Одностраничный сайт для услуги, эксперта или малого бизнеса.
+              Современный дизайн, структура под заявки, адаптивность.
+            </p>
+            <span class="price">от 2000р</span>
+          </article>
+
+          <article class="card service-card">
+            <h3>Сайт-визитка</h3>
+            <p>
+              Небольшой сайт с информацией о вас, услугах, преимуществах и контактами.
+            </p>
+            <span class="price">от 2500р</span>
+          </article>
+
+          <article class="card service-card">
+            <h3>Верстка по макету</h3>
+            <p>
+              Перевод дизайна из Figma в HTML, CSS и JavaScript с адаптацией под разные экраны.
+            </p>
+            <span class="price">от 3500р</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-block">
+        <div>
+          <h2 class="section-title">Контакты</h2>
+          <p class="section-subtitle">
+            Если нужен лендинг, сайт-визитка или верстка, можно написать мне сюда.
+          </p>
+
+          <div class="contact-list">
+            <a href="mailto:romakarpov90@gmail.com">romakarpov90@gmail.com</a>
+            <a href="https://t.me/obich2007" target="_blank">Telegram</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Ваше имя" />
+          <input type="email" placeholder="Ваш email" />
+          <textarea placeholder="Напишите, какой сайт вам нужен"></textarea>
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Ob1ch. Frontend Developer.</p>
+      <a href="#home">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
