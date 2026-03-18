@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
   <title>Ob1ch | Frontend Developer</title>
   <meta
     name="description"
@@ -20,7 +20,7 @@
 <body>
   <header class="header">
     <div class="container nav">
-      <a href="#home" class="logo">Ob<span>1ch</span></a>
+      <a href="index.html" class="logo">Ob<span>1ch</span></a>
 
       <button class="burger" id="burger" aria-label="Открыть меню">
         <span></span>
@@ -30,7 +30,7 @@
 
       <nav class="nav-menu" id="navMenu">
         <a href="#about">Обо мне</a>
-        <a href="#projects">Проекты</a>
+        <a href="projects.html">Проекты</a>
         <a href="#services">Услуги</a>
         <a href="#contact">Контакты</a>
       </nav>
@@ -41,8 +41,8 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="badge">Frontend Developer • HTML / CSS / JavaScript</span>
-          <h1>Делаю <span>лендинги</span> для малого бизнеса</h1>
+          <span class="badge reveal">Frontend Developer • HTML / CSS / JavaScript</span>
+          <h1 class="reveal">Делаю <span>лендинги</span> для малого бизнеса</h1>
           <p>
             Создаю современные адаптивные сайты-визитки и лендинги,
             которые помогают бизнесу красиво выглядеть в интернете и получать заявки.
@@ -74,15 +74,15 @@
 
     <section class="section" id="about">
       <div class="container">
-        <h2 class="section-title">Обо мне</h2>
-        <p class="section-subtitle">
+        <h2 class="section-title reveal">Обо мне</h2>
+        <p class="section-subtitle reveal">
           Я начинающий фронтенд-разработчик. Специализируюсь на создании
           лендингов и сайтов-визиток для малого бизнеса, личных брендов и услуг.
           Делаю аккуратную адаптивную верстку, понятную структуру и современный дизайн.
         </p>
 
         <div class="about-grid">
-          <article class="card">
+          <article class="card reveal">
             <h3>Что я делаю</h3>
             <p>
               Верстаю сайты по макету или с нуля. Собираю понятные блоки,
@@ -90,7 +90,7 @@
             </p>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <h3>С чем работаю</h3>
             <p>
               HTML, CSS, JavaScript, Flexbox, Grid, адаптивная верстка,
@@ -98,7 +98,7 @@
             </p>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <h3>Для кого</h3>
             <p>
               Для фотографов, репетиторов, мастеров, кофеен, локального бизнеса,
@@ -111,121 +111,110 @@
 
     <section class="section" id="projects">
       <div class="container">
-        <h2 class="section-title">Проекты</h2>
-        <p class="section-subtitle">
-          Здесь мои работы. Ниже уже есть карточки под проекты.
+        <h2 class="section-title reveal">Проекты</h2>
+        <p class="section-subtitle reveal">
+          Избранные работы. Остальные — на отдельной странице.
         </p>
 
-        <div class="projects-grid">
-          <article class="project-card">
+        <div class="projects-grid projects-grid-featured">
+          <article class="project-card reveal">
             <img src="images/photo.jpg" alt="Превью проекта Photographer" class="project-image" />
             <div class="project-content">
               <span class="project-tag">Landing Page</span>
               <h3>Сайт фотографа</h3>
-              <p>
-                Лендинг для фотографа с блоком услуг, портфолио, отзывами и формой заявки.
-              </p>
+              <p>Лендинг для фотографа с блоком услуг, портфолио, отзывами и формой заявки.</p>
               <div class="project-links">
-                <a href="https://rkdev2007.github.io/photo-man/" target="_blank">Live Demo</a>
-                <a href="https://github.com/RKDEV2007/photo-man.git" target="_blank">GitHub</a>
+                <a href="https://rkdev2007.github.io/photo-man/" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/RKDEV2007/photo-man.git" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
           </article>
 
-          <article class="project-card">
-            <!-- ВСТАВИТЬ СЮДА ПРЕВЬЮ ВТОРОГО ПРОЕКТА -->
+          <article class="project-card reveal">
             <img src="images/kofee.jpg" alt="Превью проекта Coffee Shop" class="project-image" />
             <div class="project-content">
               <span class="project-tag">Business Website</span>
               <h3>Сайт кофейни</h3>
-              <p>
-                Современный сайт для кофейни с меню, галереей, описанием и блоком контактов.
-              </p>
+              <p>Современный сайт для кофейни с меню, галереей, описанием и блоком контактов.</p>
               <div class="project-links">
-                <a href="https://rkdev2007.github.io/coffee-shop/" target="_blank">Live Demo</a>
-                <a href="https://github.com/RKDEV2007/coffee-shop.git" target="_blank">GitHub</a>
+                <a href="https://rkdev2007.github.io/coffee-shop/" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/RKDEV2007/coffee-shop.git" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
           </article>
 
-          <article class="project-card">
-            <!-- ВСТАВЬ СЮДА ПРЕВЬЮ ТРЕТЬЕГО ПРОЕКТА -->
+          <article class="project-card reveal">
             <img src="images/tutor.jpg" alt="Превью проекта Tutor" class="project-image" />
             <div class="project-content">
               <span class="project-tag">Personal Website</span>
               <h3>Сайт репетитора</h3>
-              <p>
-                Лендинг для репетитора с описанием занятий, преимуществами, отзывами и кнопкой записи.
-              </p>
+              <p>Лендинг для репетитора с описанием занятий, преимуществами, отзывами и кнопкой записи.</p>
               <div class="project-links">
-                <a href="https://rkdev2007.github.io/tutor-school/" target="_blank">Live Demo</a>
-                <a href="https://github.com/RKDEV2007/tutor-school.git" target="_blank">GitHub</a>
+                <a href="https://rkdev2007.github.io/tutor-school/" target="_blank" rel="noopener">Live Demo</a>
+                <a href="https://github.com/RKDEV2007/tutor-school.git" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
-          </article>
+        </div>
 
-          <article class="project-card">
-            <!-- ВСТАВЬ СЮДА ПРЕВЬЮ ТРЕТЬЕГО ПРОЕКТА -->
-            <img src="images/phone.jpg" alt="Превью проекта phone-repair" class="project-image" />
-            <div class="project-content">
-              <span class="project-tag">Business Website</span>
-              <h3>Сайт компании по ремонту телефонов</h3>
-              <p>
-                Лендинг для компании по ремонту телефонов.
-              </p>
-              <div class="project-links">
-                <a href="https://rkdev2007.github.io/phone-repair/" target="_blank">Live Demo</a>
-                <a href="https://github.com/RKDEV2007/phone-repair.git" target="_blank">GitHub</a>
+        <div class="projects-more" id="projectsMore" hidden>
+          <div class="projects-grid projects-grid-featured">
+            <article class="project-card reveal">
+              <img src="images/phone.jpg" alt="Превью проекта phone-repair" class="project-image" />
+              <div class="project-content">
+                <span class="project-tag">Business Website</span>
+                <h3>Сайт компании по ремонту телефонов</h3>
+                <p>Лендинг для компании по ремонту телефонов.</p>
+                <div class="project-links">
+                  <a href="https://rkdev2007.github.io/phone-repair/" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RKDEV2007/phone-repair.git" target="_blank" rel="noopener">GitHub</a>
+                </div>
               </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <!-- ВСТАВЬ СЮДА ПРЕВЬЮ ТРЕТЬЕГО ПРОЕКТА -->
-            <img src="images/neon.jpg" alt="Превью проекта computer-repair" class="project-image" />
-            <div class="project-content">
-              <span class="project-tag">Business Website</span>
-              <h3>Сайт компании по продаже компьютеровной техники</h3>
-              <p>
-                Лендинг для компании по продаже компьютеровной техники.
-              </p>
-              <div class="project-links">
-                <a href="https://rkdev2007.github.io/neon-shop/" target="_blank">Live Demo</a>
-                <a href="https://github.com/RKDEV2007/neon-shop" target="_blank">GitHub</a>
+            </article>
+            <article class="project-card reveal">
+              <img src="images/neon.jpg" alt="Превью проекта neon-shop" class="project-image" />
+              <div class="project-content">
+                <span class="project-tag">Business Website</span>
+                <h3>Сайт по продаже компьютерной техники</h3>
+                <p>Лендинг для компании по продаже компьютерной техники.</p>
+                <div class="project-links">
+                  <a href="https://rkdev2007.github.io/neon-shop/" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RKDEV2007/neon-shop" target="_blank" rel="noopener">GitHub</a>
+                </div>
               </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <!-- ВСТАВЬ СЮДА ПРЕВЬЮ ТРЕТЬЕГО ПРОЕКТА -->
-            <img src="images/clinik.jpg" alt="Превью проекта meridian-clinik" class="project-image" />
-            <div class="project-content">
-              <span class="project-tag">Business Website</span>
-              <h3>Сайт частной клиники meridian-clinik</h3>
-              <p>
-                Много страничный сайт для частной клиники. Множество страниц с информацией о клинике и услугах.
-              </p>
-              <div class="project-links">
-                <a href="https://rkdev2007.github.io/meridian-clinik/" target="_blank">Live Demo</a>
-                <a href="https://github.com/RKDEV2007/meridian-clinik" target="_blank">GitHub</a>
+            </article>
+            <article class="project-card reveal">
+              <img src="images/clinik.jpg" alt="Превью проекта meridian-clinik" class="project-image" />
+              <div class="project-content">
+                <span class="project-tag">Business Website</span>
+                <h3>Сайт частной клиники meridian-clinik</h3>
+                <p>Многостраничный сайт для частной клиники.</p>
+                <div class="project-links">
+                  <a href="https://rkdev2007.github.io/meridian-clinik/" target="_blank" rel="noopener">Live Demo</a>
+                  <a href="https://github.com/RKDEV2007/meridian-clinik" target="_blank" rel="noopener">GitHub</a>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
+        </div>
 
-
+        <div class="projects-cta">
+          <button type="button" class="toggle-arrow" id="showMoreBtn" aria-label="Показать ещё проекты">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <a href="projects.html" class="btn">Смотреть все проекты</a>
         </div>
       </div>
     </section>
 
     <section class="section" id="services">
       <div class="container">
-        <h2 class="section-title">Услуги</h2>
-        <p class="section-subtitle">
+        <h2 class="section-title reveal">Услуги</h2>
+        <p class="section-subtitle reveal">
           Базовые услуги, которые можно продавать уже сейчас.
         </p>
 
         <div class="services-grid">
-          <article class="card service-card">
+          <article class="card service-card reveal">
             <h3>Лендинг для бизнеса</h3>
             <p>
               Одностраничный сайт для услуги, эксперта или малого бизнеса.
@@ -234,7 +223,7 @@
             <span class="price">от 2000р</span>
           </article>
 
-          <article class="card service-card">
+          <article class="card service-card reveal">
             <h3>Сайт-визитка</h3>
             <p>
               Небольшой сайт с информацией о вас, услугах, преимуществах и контактами.
@@ -242,7 +231,7 @@
             <span class="price">от 2500р</span>
           </article>
 
-          <article class="card service-card">
+          <article class="card service-card reveal">
             <h3>Верстка по макету</h3>
             <p>
               Перевод дизайна из Figma в HTML, CSS и JavaScript с адаптацией под разные экраны.
@@ -256,8 +245,8 @@
     <section class="section" id="contact">
       <div class="container contact-block">
         <div>
-          <h2 class="section-title">Контакты</h2>
-          <p class="section-subtitle">
+          <h2 class="section-title reveal">Контакты</h2>
+          <p class="section-subtitle reveal">
             Если нужен лендинг, сайт-визитка или верстка, можно написать мне сюда.
           </p>
 
@@ -268,11 +257,19 @@
           </div>
         </div>
 
-        <form class="contact-form">
-          <input type="text" placeholder="Ваше имя" />
-          <input type="email" placeholder="Ваш email" />
-          <textarea placeholder="Напишите, какой сайт вам нужен"></textarea>
-          <button type="submit" class="btn">Отправить</button>
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/romakarpov90@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Новая заявка с сайта Ob1ch" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" />
+          <input type="text" name="name" id="contactName" placeholder="Ваше имя" required aria-required="true" aria-describedby="name-error" />
+          <span class="form-error" id="name-error" aria-live="polite"></span>
+          <input type="email" name="email" id="contactEmail" placeholder="Ваш email" required aria-required="true" aria-describedby="email-error" />
+          <span class="form-error" id="email-error" aria-live="polite"></span>
+          <textarea name="message" id="contactMessage" placeholder="Сообщение: какой сайт вам нужен" required aria-required="true" aria-describedby="message-error" minlength="10"></textarea>
+          <span class="form-error" id="message-error" aria-live="polite"></span>
+          <div class="form-status" id="formStatus" aria-live="polite"></div>
+          <button type="submit" class="btn" id="submitBtn">Отправить</button>
         </form>
       </div>
     </section>
