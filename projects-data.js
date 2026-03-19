@@ -58,5 +58,15 @@ window.PROJECTS_DATA = [
     image: "images/clinik.jpg",
     demo: "https://rkdev2007.github.io/meridian-clinik/",
     github: "https://github.com/RKDEV2007/meridian-clinik"
+  },
+  {
+    id: 6,
+    title: "Сайт для репетитора по английскому с многостраничной структурой и анимацией",
+    tag: "Business Website",
+    tags: ["Frontend", "Web Design"],
+    description: "Многостраничный сайт для репетитора по английскому.",
+    image: "images/english.jpg",
+    demo: "https://rkdev2007.github.io/english-tutor/",
+    github: "https://github.com/RKDEV2007/english-tutor"
   }
 ];
