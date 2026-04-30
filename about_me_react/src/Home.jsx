@@ -8,7 +8,7 @@ function Home({ goToProjects }) {
       <section className="hero" id="home">
         <div className="container hero-grid">
           <div className="hero-content">
-            <span className="badge">Frontend Developer • HTML / CSS / JavaScript</span>
+            <span className="badge">Frontend Developer • HTML / CSS / JavaScript / React</span>
             <h1>Делаю <span>лендинги</span> для малого бизнеса</h1>
             <p>
               Создаю современные адаптивные сайты-визитки и лендинги,
@@ -59,7 +59,7 @@ function Home({ goToProjects }) {
             <article className="card">
               <h3>С чем работаю</h3>
               <p>
-                HTML, CSS, JavaScript, Flexbox, Grid, адаптивная верстка,
+                HTML, CSS, JavaScript, React, Flexbox, Grid, адаптивная верстка,
                 базовые анимации, формы, секции для продаж и заявок.
               </p>
             </article>
