@@ -1,8 +1,9 @@
-import { useState } from "react";
+import projectsData from "./projectsData";
+
+const FEATURED_COUNT = 3;
+const featuredProjects = projectsData.slice(0, FEATURED_COUNT);
 
 function Home({ goToProjects }) {
-  const [showMore, setShowMore] = useState(false);
-
   return (
     <>
       <section className="hero" id="home">
@@ -79,114 +80,38 @@ function Home({ goToProjects }) {
         <div className="container">
           <h2 className="section-title">Проекты</h2>
           <p className="section-subtitle">
-            Избранные работы. Остальные — на отдельной странице.
+            На главной — первые три проекта из списка. Полный каталог — на отдельной странице.
           </p>
 
           <div className="projects-grid projects-grid-featured">
-            <article className="project-card">
-              <img src="/images/english.jpg" alt="Превью проекта репетитор по английскому" className="project-image" />
-              <div className="project-content">
-                <span className="project-tag">Business Website</span>
-                <h3>Сайт репетитора по английскому</h3>
-                <p>Многостраничный сайт с анимациями: занятия, преподаватели, запись на пробный урок.</p>
-                <div className="project-links">
-                  <a href="https://rkdev2007.github.io/english-tutor/" target="_blank" rel="noopener">Live Demo</a>
-                  <a href="https://github.com/RKDEV2007/english-tutor" target="_blank" rel="noopener">GitHub</a>
+            {featuredProjects.map((project) => (
+              <article key={project.id} className="project-card">
+                <img
+                  src={project.image}
+                  alt={`Превью: ${project.title}`}
+                  className="project-image"
+                />
+                <div className="project-content">
+                  <span className="project-tag">{project.tag}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="project-links">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      Live Demo
+                    </a>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </article>
-
-            <article className="project-card">
-              <img src="/images/clinik.jpg" alt="Превью проекта meridian-clinik" className="project-image" />
-              <div className="project-content">
-                <span className="project-tag">Business Website</span>
-                <h3>Сайт частной клиники meridian-clinik</h3>
-                <p>Многостраничный сайт для частной клиники: услуги, врачи, контакты.</p>
-                <div className="project-links">
-                  <a href="https://rkdev2007.github.io/meridian-clinik/" target="_blank" rel="noopener">Live Demo</a>
-                  <a href="https://github.com/RKDEV2007/meridian-clinik" target="_blank" rel="noopener">GitHub</a>
-                </div>
-              </div>
-            </article>
-
-            <article className="project-card">
-              <img src="/images/phone.jpg" alt="Превью проекта phone-repair" className="project-image" />
-              <div className="project-content">
-                <span className="project-tag">Business Website</span>
-                <h3>Сайт компании по ремонту телефонов</h3>
-                <p>Лендинг для компании по ремонту телефонов.</p>
-                <div className="project-links">
-                  <a href="https://rkdev2007.github.io/phone-repair/" target="_blank" rel="noopener">Live Demo</a>
-                  <a href="https://github.com/RKDEV2007/phone-repair.git" target="_blank" rel="noopener">GitHub</a>
-                </div>
-              </div>
-            </article>
+              </article>
+            ))}
           </div>
 
-          {showMore && (
-            <div className="projects-more">
-              <div className="projects-grid projects-grid-featured">
-                <article className="project-card">
-                  <img src="/images/tutor.jpg" alt="Превью проекта команда репетиторов" className="project-image" />
-                  <div className="project-content">
-                    <span className="project-tag">Business Website</span>
-                    <h3>Сайт для команды репетиторов</h3>
-                    <p>Многостраничный сайт школы: направления, преподаватели, отзывы и запись.</p>
-                    <div className="project-links">
-                      <a href="https://rkdev2007.github.io/tutor-school/" target="_blank" rel="noopener">Live Demo</a>
-                      <a href="https://github.com/RKDEV2007/tutor-school.git" target="_blank" rel="noopener">GitHub</a>
-                    </div>
-                  </div>
-                </article>
-                <article className="project-card">
-                  <img src="/images/photo.jpg" alt="Превью проекта Photographer" className="project-image" />
-                  <div className="project-content">
-                    <span className="project-tag">Landing Page</span>
-                    <h3>Сайт фотографа</h3>
-                    <p>Лендинг для фотографа с блоком услуг, портфолио, отзывами и формой заявки.</p>
-                    <div className="project-links">
-                      <a href="https://rkdev2007.github.io/photo-man/" target="_blank" rel="noopener">Live Demo</a>
-                      <a href="https://github.com/RKDEV2007/photo-man.git" target="_blank" rel="noopener">GitHub</a>
-                    </div>
-                  </div>
-                </article>
-                <article className="project-card">
-                  <img src="/images/kofee.jpg" alt="Превью проекта Coffee Shop" className="project-image" />
-                  <div className="project-content">
-                    <span className="project-tag">Business Website</span>
-                    <h3>Сайт кофейни</h3>
-                    <p>Современный сайт для кофейни с меню, галереей, описанием и блоком контактов.</p>
-                    <div className="project-links">
-                      <a href="https://rkdev2007.github.io/coffee-shop/" target="_blank" rel="noopener">Live Demo</a>
-                      <a href="https://github.com/RKDEV2007/coffee-shop.git" target="_blank" rel="noopener">GitHub</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          )}
-
           <div className="projects-cta">
-            <button
-              type="button"
-              className={"toggle-arrow" + (showMore ? " toggle-arrow-open" : "")}
-              onClick={() => setShowMore(!showMore)}
-              aria-label="Показать ещё проекты"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+            <button type="button" className="btn" onClick={goToProjects}>
+              Показать больше
             </button>
-            <a
-              href="#"
-              className="btn"
-              onClick={(e) => {
-                e.preventDefault();
-                goToProjects();
-              }}
-            >
-              Смотреть все проекты
-            </a>
           </div>
         </div>
       </section>
