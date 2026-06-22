@@ -11,18 +11,18 @@ const projectsData = [
   },
   {
     id: 1,
-    title: "Сайт для репетитора по английскому с многостраничной структурой и анимацией",
-    tag: "Business Website",
+    title: "WeekPlanner",
+    tag: "Pet-project",
     tags: ["Frontend", "Web Design"],
-    description: "Многостраничный сайт для репетитора по английскому.",
-    image: "/images/english.jpg",
-    demo: "https://rkdev2007.github.io/english-tutor/",
-    github: "https://github.com/RKDEV2007/english-tutor"
+    description: "Планировщик недельных задач с возможностью добавления и удаления задач. Есть энергия, котора отображает ваш ресурс, а также может гененрировать неделю",
+    image: "/images/weekplan.png",
+    demo: "https://week-plan-gamma.vercel.app",
+    github: "https://github.com/RKDEV2007/WeekPlan"
   },
   {
     id: 2,
     title: "Финансовый трекер",
-    tag: "Business Website",
+    tag: "Pet-project",
     tags: ["Frontend", "Web Design"],
     description: "Финансовый трекер с возможностью добавления, редактирования и удаления транзакций.",
     image: "/images/finance.jpg",
@@ -90,6 +90,17 @@ const projectsData = [
   demo: "https://rkdev2007.github.io/photo-man/",
   github: "https://github.com/RKDEV2007/photo-man.git"
 },
+{
+  id: 9,
+  title: "Сайт для репетитора по английскому с многостраничной структурой и анимацией",
+  tag: "Business Website",
+  tags: ["Frontend", "Web Design"],
+  description: "Многостраничный сайт для репетитора по английскому.",
+  image: "/images/english.jpg",
+  demo: "https://rkdev2007.github.io/english-tutor/",
+  github: "https://github.com/RKDEV2007/english-tutor"
+},
+
 ];
 
 export default projectsData;
