@@ -1,13 +1,13 @@
 const projectsData = [
   {
     id: 0,
-    title: "Сайт репетитора",
-    tag: "Personal Website",
-    tags: ["Landing", "Frontend"],
-    description: "Лендинг для репетитора с описанием занятий, преимуществами, отзывами и кнопкой записи.",
-    image: "/images/tutor.jpg",
-    demo: "https://rkdev2007.github.io/tutor-school/",
-    github: "https://github.com/RKDEV2007/tutor-school.git"
+    title: "Сайт для репетитора по английскому с многостраничной структурой и анимацией",
+    tag: "Business Website",
+    tags: ["Frontend", "Web Design"],
+    description: "Многостраничный сайт для репетитора по английскому.",
+    image: "/images/english.jpg",
+    demo: "https://rkdev2007.github.io/english-tutor/",
+    github: "https://github.com/RKDEV2007/english-tutor"
   },
   {
     id: 1,
@@ -91,15 +91,16 @@ const projectsData = [
   demo: "https://rkdev2007.github.io/photo-man/",
   github: "https://github.com/RKDEV2007/photo-man.git"
 },
+
 {
   id: 9,
-  title: "Сайт для репетитора по английскому с многостраничной структурой и анимацией",
-  tag: "Business Website",
-  tags: ["Frontend", "Web Design"],
-  description: "Многостраничный сайт для репетитора по английскому.",
-  image: "/images/english.jpg",
-  demo: "https://rkdev2007.github.io/english-tutor/",
-  github: "https://github.com/RKDEV2007/english-tutor"
+  title: "Сайт репетитора",
+  tag: "Personal Website",
+  tags: ["Landing", "Frontend"],
+  description: "Лендинг для репетитора с описанием занятий, преимуществами, отзывами и кнопкой записи.",
+  image: "/images/tutor.jpg",
+  demo: "https://rkdev2007.github.io/tutor-school/",
+  github: "https://github.com/RKDEV2007/tutor-school.git"
 },
 
 ];
