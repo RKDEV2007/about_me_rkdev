@@ -130,7 +130,7 @@ function Home({ goToProjects }) {
                 Одностраничный сайт для услуги, эксперта или малого бизнеса.
                 Современный дизайн, структура под заявки, адаптивность.
               </p>
-              <span className="price">от 2000р</span>
+              <span className="price">от 6000р</span>
             </article>
 
             <article className="card service-card">
@@ -138,7 +138,7 @@ function Home({ goToProjects }) {
               <p>
                 Небольшой сайт с информацией о вас, услугах, преимуществах и контактами.
               </p>
-              <span className="price">от 2500р</span>
+              <span className="price">от 9000р</span>
             </article>
 
             <article className="card service-card">
@@ -146,7 +146,7 @@ function Home({ goToProjects }) {
               <p>
                 Перевод дизайна из Figma в HTML, CSS и JavaScript с адаптацией под разные экраны.
               </p>
-              <span className="price">от 3500р</span>
+              <span className="price">от 7000р</span>
             </article>
           </div>
         </div>
