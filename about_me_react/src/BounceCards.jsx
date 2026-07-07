@@ -56,6 +56,10 @@ export default function BounceCards({
         return;
       }
 
+      if (event.target.closest(".bounce-lightbox")) {
+        return;
+      }
+
       hideCards();
     }
 
@@ -248,6 +252,7 @@ export default function BounceCards({
           role="dialog"
           aria-modal="true"
           aria-label="Просмотр изображения проекта"
+          onPointerDown={(event) => event.stopPropagation()}
           onClick={(event) => {
             event.stopPropagation();
             setLightboxIndex(null);
@@ -257,6 +262,7 @@ export default function BounceCards({
             type="button"
             className="bounce-lightbox-close"
             aria-label="Закрыть просмотр"
+            onPointerDown={(event) => event.stopPropagation()}
             onClick={(event) => {
               event.stopPropagation();
               setLightboxIndex(null);
@@ -267,12 +273,17 @@ export default function BounceCards({
             type="button"
             className="bounce-lightbox-arrow bounce-lightbox-arrow-prev"
             aria-label="Предыдущее изображение"
+            onPointerDown={(event) => event.stopPropagation()}
             onClick={showPrevImage}
           >
             ‹
           </button>
 
-          <figure className="bounce-lightbox-frame" onClick={(event) => event.stopPropagation()}>
+          <figure
+            className="bounce-lightbox-frame"
+            onPointerDown={(event) => event.stopPropagation()}
+            onClick={(event) => event.stopPropagation()}
+          >
             <img
               src={previewImages[lightboxIndex]}
               alt={`${alt}: изображение ${lightboxIndex + 1}`}
@@ -287,6 +298,7 @@ export default function BounceCards({
             type="button"
             className="bounce-lightbox-arrow bounce-lightbox-arrow-next"
             aria-label="Следующее изображение"
+            onPointerDown={(event) => event.stopPropagation()}
             onClick={showNextImage}
           >
             ›

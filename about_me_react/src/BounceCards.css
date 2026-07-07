@@ -120,20 +120,26 @@
   position: fixed;
   inset: 0;
   z-index: 500;
-  display: grid;
-  grid-template-columns: minmax(52px, 1fr) minmax(0, 78vw) minmax(52px, 1fr);
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 18px;
-  padding: clamp(18px, 4vw, 42px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding:
+    calc(22px + env(safe-area-inset-top, 0px))
+    calc(20px + env(safe-area-inset-right, 0px))
+    calc(22px + env(safe-area-inset-bottom, 0px))
+    calc(20px + env(safe-area-inset-left, 0px));
   background: rgba(23, 56, 47, 0.86);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+  touch-action: manipulation;
 }
 
 .bounce-lightbox-frame {
   position: relative;
-  grid-column: 2;
-  width: 100%;
+  width: min(100%, 1100px);
   margin: 0;
 }
 
@@ -185,8 +191,9 @@
 
 .bounce-lightbox-close {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: calc(18px + env(safe-area-inset-top, 0px));
+  right: calc(18px + env(safe-area-inset-right, 0px));
+  z-index: 2;
   width: 44px;
   height: 44px;
 }
@@ -209,18 +216,22 @@
 }
 
 .bounce-lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  z-index: 2;
   width: 52px;
   height: 64px;
   font-size: 42px;
   line-height: 1;
+  transform: translateY(-50%);
 }
 
 .bounce-lightbox-arrow-prev {
-  justify-self: end;
+  left: calc(18px + env(safe-area-inset-left, 0px));
 }
 
 .bounce-lightbox-arrow-next {
-  justify-self: start;
+  right: calc(18px + env(safe-area-inset-right, 0px));
 }
 
 @media (max-width: 760px) {
@@ -233,28 +244,40 @@
   }
 
   .bounce-lightbox {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    gap: 14px;
-    padding: 16px;
+    padding:
+      calc(72px + env(safe-area-inset-top, 0px))
+      calc(12px + env(safe-area-inset-right, 0px))
+      calc(82px + env(safe-area-inset-bottom, 0px))
+      calc(12px + env(safe-area-inset-left, 0px));
   }
 
   .bounce-lightbox-frame {
-    grid-column: 1 / -1;
+    width: 100%;
   }
 
   .bounce-lightbox-image {
-    max-height: 76vh;
+    max-height: 66dvh;
   }
 
   .bounce-lightbox-arrow {
-    width: 100%;
+    top: auto;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    width: 58px;
     height: 48px;
     font-size: 34px;
+    transform: none;
   }
 
-  .bounce-lightbox-arrow-prev,
+  .bounce-lightbox-arrow-prev {
+    left: calc(18px + env(safe-area-inset-left, 0px));
+  }
+
   .bounce-lightbox-arrow-next {
-    justify-self: stretch;
+    right: calc(18px + env(safe-area-inset-right, 0px));
+  }
+
+  .bounce-lightbox-close {
+    top: calc(16px + env(safe-area-inset-top, 0px));
+    right: calc(16px + env(safe-area-inset-right, 0px));
   }
 }
