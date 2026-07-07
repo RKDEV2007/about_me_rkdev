@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap");
+
+:root {
+  --bg: #214C40;
+  --bg-deep: #17382F;
+  --bg-soft: #2B6251;
+  --brown: #2B1A12;
+  --accent: #B9E5C8;
+  --text: #F3FFF8;
+  --muted: rgba(243, 255, 248, 0.68);
+  --muted-strong: rgba(243, 255, 248, 0.86);
+  --surface: rgba(43, 26, 18, 0.58);
+  --surface-strong: rgba(43, 26, 18, 0.78);
+  --brown-surface: rgba(43, 26, 18, 0.72);
+  --line: rgba(185, 229, 200, 0.18);
+  --line-strong: rgba(185, 229, 200, 0.34);
+  --shadow: 0 24px 70px rgba(43, 26, 18, 0.34);
+  --radius: 8px;
+  --container: 1180px;
+  --header-height: 76px;
+  --font-text: "Onest", Arial, sans-serif;
+  --font-heading: "Unbounded", "Onest", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background: var(--bg);
+}
+
+body {
+  color: var(--text);
+  background:
+    linear-gradient(180deg, rgba(185, 229, 200, 0.12) 0%, rgba(33, 76, 64, 0) 380px),
+    linear-gradient(135deg, var(--bg-soft) 0%, var(--bg) 42%, var(--bg-deep) 100%),
+    var(--bg);
+  font-family: var(--font-text);
+  line-height: 1.62;
+  padding-top: calc(var(--header-height) + env(safe-area-inset-top, 0px));
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+.container {
+  width: min(100% - 32px, var(--container));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 92px 0;
+}
+
+.section-kicker {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.section-title {
+  max-width: 900px;
+  margin-bottom: 18px;
+  font-family: var(--font-heading);
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.section-subtitle {
+  max-width: 780px;
+  margin-bottom: 38px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 22px;
+  border: 1px solid rgba(185, 229, 200, 0.24);
+  border-radius: var(--radius);
+  background: var(--brown);
+  color: var(--accent);
+  box-shadow: 0 16px 36px rgba(43, 26, 18, 0.34);
+  cursor: pointer;
+  font-weight: 800;
+  line-height: 1.2;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(43, 26, 18, 0.42);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: rgba(43, 26, 18, 0.42);
+}
+
+.card,
+.hero-card,
+.project-card,
+.contact-tile,
+.modal-content {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.card {
+  padding: 28px;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  background: var(--surface-strong);
+  box-shadow: 0 26px 74px rgba(43, 26, 18, 0.42);
+}
+
+.card h3,
+.project-content h3 {
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.card p,
+.project-content p {
+  color: var(--muted);
+}
+
+.card-number {
+  display: inline-block;
+  margin-bottom: 34px;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+}

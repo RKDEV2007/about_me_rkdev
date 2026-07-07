@@ -1,7 +1,16 @@
+import ContactSection from "./ContactSection";
+import BounceCards from "./BounceCards";
 import projectsData from "./projectsData";
 
 const FEATURED_COUNT = 3;
 const featuredProjects = projectsData.slice(0, FEATURED_COUNT);
+const projectPreviewTransforms = [
+  "rotate(5deg) translate(-92px)",
+  "rotate(0deg) translate(-46px)",
+  "rotate(-5deg)",
+  "rotate(5deg) translate(46px)",
+  "rotate(-5deg) translate(92px)"
+];
 
 function Home({ goToProjects }) {
   return (
@@ -9,31 +18,32 @@ function Home({ goToProjects }) {
       <section className="hero" id="home">
         <div className="container hero-grid">
           <div className="hero-content">
-            <span className="badge">Frontend Developer • HTML / CSS / JavaScript / React</span>
-            <h1>Делаю <span>лендинги</span> для малого бизнеса</h1>
+            <span className="badge">Frontend Developer / React / Adaptive UI</span>
+            <h1>Создаю понятные сайты для экспертов и малого бизнеса</h1>
             <p>
-              Создаю современные адаптивные сайты-визитки и лендинги,
-              которые помогают бизнесу красиво выглядеть в интернете и получать заявки.
+              Проектирую интерфейс, верстаю адаптивные страницы и собираю React-проекты,
+              в которых аккуратный дизайн работает на доверие, заявки и удобство пользователя.
             </p>
 
             <div className="hero-actions">
-              <a href="#projects" className="btn">Смотреть проекты</a>
-              <a href="#contact" className="btn btn-secondary">Связаться со мной</a>
+              <a href="#projects" className="btn">Посмотреть работы</a>
+              <a href="#contact" className="btn btn-secondary">Обсудить проект</a>
             </div>
 
             <div className="hero-tags">
-              <span>Адаптивная верстка</span>
-              <span>Landing Page</span>
-              <span>Чистый код</span>
-              <span>Быстрая разработка</span>
+              <span>Семантичная верстка</span>
+              <span>React-компоненты</span>
+              <span>Адаптивные интерфейсы</span>
+              <span>Внимание к деталям</span>
             </div>
           </div>
 
           <div className="hero-card">
             <img src="/images/profile.jpg" alt="Фото разработчика" className="hero-image" />
             <div className="hero-card-info">
-              <h3>Ob1ch</h3>
-              <p>Frontend Developer</p>
+              <span>RKDEV</span>
+              <h3>Роман Карпов</h3>
+              <p>Frontend developer, который собирает ясные интерфейсы для реальных задач.</p>
             </div>
           </div>
         </div>
@@ -41,35 +51,39 @@ function Home({ goToProjects }) {
 
       <section className="section" id="about">
         <div className="container">
+          <span className="section-kicker">Профиль</span>
           <h2 className="section-title">Обо мне</h2>
           <p className="section-subtitle">
-            Я начинающий фронтенд-разработчик. Специализируюсь на создании
-            лендингов и сайтов-визиток для малого бизнеса, личных брендов и услуг.
-            Делаю аккуратную адаптивную верстку, понятную структуру и современный дизайн.
+            Я работаю с фронтендом как с инструментом для ясной коммуникации:
+            помогаю упаковать услугу, продукт или личный бренд в аккуратный сайт,
+            который легко читать, удобно открывать с телефона и просто поддерживать.
           </p>
 
           <div className="about-grid">
             <article className="card">
-              <h3>Что я делаю</h3>
+              <span className="card-number">01</span>
+              <h3>Структура</h3>
               <p>
-                Верстаю сайты по макету или с нуля. Собираю понятные блоки,
-                делаю адаптив под телефон, планшет и компьютер.
+                Продумываю порядок блоков, тексты, акценты и сценарий пользователя,
+                чтобы сайт не просто выглядел хорошо, а вел к понятному действию.
               </p>
             </article>
 
             <article className="card">
-              <h3>С чем работаю</h3>
+              <span className="card-number">02</span>
+              <h3>Интерфейс</h3>
               <p>
-                HTML, CSS, JavaScript, React, Flexbox, Grid, адаптивная верстка,
-                базовые анимации, формы, секции для продаж и заявок.
+                Собираю адаптивную верстку на HTML, CSS, JavaScript и React:
+                сетки, карточки, формы, состояния, навигацию и интерактивные детали.
               </p>
             </article>
 
             <article className="card">
-              <h3>Для кого</h3>
+              <span className="card-number">03</span>
+              <h3>Качество</h3>
               <p>
-                Для фотографов, репетиторов, мастеров, кофеен, локального бизнеса,
-                экспертов и всех, кому нужен красивый сайт без лишней драмы.
+                Пишу читаемый код, держу структуру компонентов в порядке и проверяю,
+                как страница выглядит на разных экранах.
               </p>
             </article>
           </div>
@@ -78,18 +92,27 @@ function Home({ goToProjects }) {
 
       <section className="section" id="projects">
         <div className="container">
-          <h2 className="section-title">Проекты</h2>
+          <span className="section-kicker">Портфолио</span>
+          <h2 className="section-title">Проекты с фокусом на пользу</h2>
           <p className="section-subtitle">
-            На главной — первые три проекта из списка. Полный каталог — на отдельной странице.
+            В подборке есть сайты для услуг, локального бизнеса и React-приложения.
+            Каждый проект показывает работу со структурой, адаптивом и визуальной подачей.
           </p>
 
           <div className="projects-grid projects-grid-featured">
             {featuredProjects.map((project) => (
               <article key={project.id} className="project-card">
-                <img
-                  src={project.image}
+                <BounceCards
+                  className="project-bounceCards"
+                  images={Array(5).fill(project.image)}
                   alt={`Превью: ${project.title}`}
-                  className="project-image"
+                  containerWidth="100%"
+                  containerHeight={222}
+                  animationDelay={0}
+                  animationStagger={0.08}
+                  easeType="elastic.out(1, 0.5)"
+                  transformStyles={projectPreviewTransforms}
+                  enableHover={true}
                 />
                 <div className="project-content">
                   <span className="project-tag">{project.tag}</span>
@@ -110,7 +133,7 @@ function Home({ goToProjects }) {
 
           <div className="projects-cta">
             <button type="button" className="btn" onClick={goToProjects}>
-              Показать больше
+              Открыть все проекты
             </button>
           </div>
         </div>
@@ -118,94 +141,44 @@ function Home({ goToProjects }) {
 
       <section className="section" id="services">
         <div className="container">
-          <h2 className="section-title">Услуги</h2>
+          <span className="section-kicker">Форматы</span>
+          <h2 className="section-title">Чем могу быть полезен</h2>
           <p className="section-subtitle">
-            Базовые услуги, которые можно продавать уже сейчас.
+            Беру задачи, где важны аккуратная подача, адаптивность и понятная структура.
           </p>
 
           <div className="services-grid">
             <article className="card service-card">
-              <h3>Лендинг для бизнеса</h3>
+              <h3>Лендинг для услуги</h3>
               <p>
-                Одностраничный сайт для услуги, эксперта или малого бизнеса.
-                Современный дизайн, структура под заявки, адаптивность.
+                Одностраничный сайт с сильным первым экраном, блоками доверия,
+                описанием предложения и удобным переходом к контакту.
               </p>
-              <span className="price">от 6000р</span>
+              <span className="price">от 6000 руб.</span>
             </article>
 
             <article className="card service-card">
               <h3>Сайт-визитка</h3>
               <p>
-                Небольшой сайт с информацией о вас, услугах, преимуществах и контактами.
+                Компактный сайт о специалисте, бренде или локальном бизнесе:
+                профиль, услуги, проекты, преимущества и контакты.
               </p>
-              <span className="price">от 9000р</span>
+              <span className="price">от 9000 руб.</span>
             </article>
 
             <article className="card service-card">
               <h3>Верстка по макету</h3>
               <p>
-                Перевод дизайна из Figma в HTML, CSS и JavaScript с адаптацией под разные экраны.
+                Перевод дизайна из Figma в HTML, CSS, JavaScript или React
+                с вниманием к адаптиву, состояниям и повторяемым компонентам.
               </p>
-              <span className="price">от 7000р</span>
+              <span className="price">от 7000 руб.</span>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="section section-contact" id="contact">
-        <div className="container contact-layout">
-          <header className="contact-intro">
-            <h2 className="section-title">Контакты</h2>
-            <p className="section-subtitle">
-              Лендинг, визитка или вёрстка — напишите в Telegram. Код и репозитории смотрите на GitHub.
-            </p>
-          </header>
-
-          <div className="contact-bento">
-            <a
-              href="https://t.me/obich2007"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-tile contact-tile--telegram"
-            >
-              <div className="contact-tile-head">
-                <span className="contact-tile-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.95 4.05a1.25 1.25 0 0 0-1.32-.12L3.4 11.18c-.88.36-.87 1.64.02 1.97l4.42 1.54 1.71 5.18c.23.7 1.2.9 1.73.35l2.27-2.33 4.47 3.28c.55.4 1.33.1 1.48-.58l3.45-16.2zM8.6 13.86l10.16-6.3-7.12 6.45-.45 3.45-2.59-3.6z" />
-                  </svg>
-                </span>
-                <span className="contact-tile-external" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M7 7h10v10" /></svg>
-                </span>
-              </div>
-              <span className="contact-tile-eyebrow">Связь</span>
-              <span className="contact-tile-title">Telegram</span>
-              <span className="contact-tile-desc">Отвечаю быстро — обсудим задачу и сроки</span>
-            </a>
-
-            <a
-              href="https://github.com/RKDEV2007?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-tile contact-tile--github"
-            >
-              <div className="contact-tile-head">
-                <span className="contact-tile-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
-                  </svg>
-                </span>
-                <span className="contact-tile-external" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7M7 7h10v10" /></svg>
-                </span>
-              </div>
-              <span className="contact-tile-eyebrow">Портфолио кода</span>
-              <span className="contact-tile-title">GitHub</span>
-              <span className="contact-tile-desc">Репозитории, коммиты и живые примеры проектов</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <ContactSection />
     </>
   );
 }

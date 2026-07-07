@@ -1,0 +1,101 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  position: relative;
+  overflow: visible;
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    background 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.project-card:hover {
+  z-index: 4;
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  background: var(--surface-strong);
+  box-shadow: 0 28px 80px rgba(43, 26, 18, 0.42);
+}
+
+.project-card-clickable {
+  cursor: pointer;
+}
+
+.project-card-image-wrap {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
+.project-content {
+  padding: 22px;
+}
+
+.project-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-tags-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.project-tags-inline span {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(43, 26, 18, 0.46);
+  color: var(--muted-strong);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.project-links a {
+  color: var(--accent);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: rgba(185, 229, 200, 0.34);
+  text-underline-offset: 5px;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.project-links a:hover {
+  color: var(--text);
+  text-decoration-color: var(--accent);
+}
+
+.page-projects .section-hero {
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+
+.projects-list-section {
+  padding-top: 34px;
+}
+
+.projects-grid-full {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}

@@ -1,0 +1,112 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.24s ease,
+    visibility 0.24s ease;
+}
+
+.modal.modal-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 56, 47, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  position: relative;
+  width: min(100%, 590px);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--brown);
+  transform: scale(0.97);
+  transition: transform 0.24s ease;
+}
+
+.modal.modal-open .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(43, 26, 18, 0.62);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.modal-close:hover {
+  border-color: var(--line-strong);
+  background: rgba(43, 26, 18, 0.82);
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background: var(--accent);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal-body {
+  padding: 28px;
+}
+
+.modal-project-image {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  filter: saturate(0.86) contrast(1.05) brightness(0.86);
+}
+
+.modal-project-title {
+  margin-bottom: 12px;
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+.modal-project-desc {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.modal-project .project-links {
+  gap: 12px;
+}
+
+.modal-project .project-links a {
+  text-decoration: none;
+}
