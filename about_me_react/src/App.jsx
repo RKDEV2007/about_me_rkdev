@@ -52,7 +52,7 @@ function App() {
           <nav className={"nav-menu" + (menuOpen ? " active" : "")}>
             {page === "home" ? (
               <>
-                <a href="#about" onClick={closeMenu}>Обо мне</a>
+                <a href="#services" onClick={closeMenu}>Услуги</a>
                 <a
                   href="#"
                   onClick={(e) => {
@@ -62,7 +62,7 @@ function App() {
                 >
                   Проекты
                 </a>
-                <a href="#services" onClick={closeMenu}>Форматы</a>
+                <a href="#about" onClick={closeMenu}>Обо мне</a>
                 <a href="#contact" onClick={closeMenu}>Контакты</a>
               </>
             ) : (

@@ -2,8 +2,8 @@
   .hero-grid,
   .contact-layout,
   .about-grid,
+  .offers-grid,
   .projects-grid,
-  .services-grid,
   .projects-grid-full {
     grid-template-columns: 1fr 1fr;
   }
@@ -60,6 +60,7 @@
 
   .hero h1 {
     font-size: 42px;
+    overflow-wrap: anywhere;
   }
 
   .hero-image {
@@ -67,11 +68,23 @@
   }
 
   .about-grid,
+  .offers-grid,
   .projects-grid,
-  .services-grid,
   .projects-grid-full,
   .contact-bento {
     grid-template-columns: 1fr;
+  }
+
+  .offer-pair {
+    gap: 18px;
+  }
+
+  .offer-example {
+    padding: 12px;
+  }
+
+  .offer-example .project-bounceCards {
+    height: 210px !important;
   }
 
   .footer-inner {
@@ -89,6 +102,10 @@
     font-size: 36px;
   }
 
+  .service-copy h3 {
+    font-size: 26px;
+  }
+
   .hero-actions,
   .project-links,
   .footer-actions {
@@ -103,6 +120,7 @@
   }
 
   .card,
+  .service-copy,
   .contact-tile,
   .modal-body,
   .project-content {

@@ -33,7 +33,12 @@ export default function BounceCards({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  const previewImages = images.length > 0 ? images : ["/images/profile.jpg"];
+  // Передайте сюда массив из пяти разных путей: images={project.gallery}.
+  // Каждый элемент станет отдельной карточкой и кадром полноэкранной галереи.
+  const previewImages = images.filter(Boolean).slice(0, 5);
+  const galleryImages = previewImages.length > 0
+    ? previewImages
+    : ["/images/profile.jpg"];
   const portalRoot = typeof document === "undefined" ? null : document.body;
 
   useEffect(() => {
@@ -46,7 +51,7 @@ export default function BounceCards({
       pointerEvents: "none",
       zIndex: (index) => index + 2
     });
-  }, [previewImages.length]);
+  }, [galleryImages.length]);
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -82,7 +87,7 @@ export default function BounceCards({
         setLightboxIndex((currentIndex) => (
           currentIndex === null
             ? currentIndex
-            : (currentIndex - 1 + previewImages.length) % previewImages.length
+            : (currentIndex - 1 + galleryImages.length) % galleryImages.length
         ));
       }
 
@@ -90,7 +95,7 @@ export default function BounceCards({
         setLightboxIndex((currentIndex) => (
           currentIndex === null
             ? currentIndex
-            : (currentIndex + 1) % previewImages.length
+            : (currentIndex + 1) % galleryImages.length
         ));
       }
     }
@@ -101,7 +106,7 @@ export default function BounceCards({
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [lightboxIndex, previewImages.length]);
+  }, [lightboxIndex, galleryImages.length]);
 
   function revealCards() {
     const cards = cardRefs.current.filter(Boolean);
@@ -156,7 +161,7 @@ export default function BounceCards({
 
       gsap.to(card, {
         transform: cardIndex === index ? selectedTransform : baseTransform,
-        zIndex: cardIndex === index ? previewImages.length + 10 : cardIndex + 2,
+        zIndex: cardIndex === index ? galleryImages.length + 10 : cardIndex + 2,
         duration: 0.28,
         ease: "back.out(1.6)",
         overwrite: "auto"
@@ -175,7 +180,7 @@ export default function BounceCards({
     setLightboxIndex((currentIndex) => (
       currentIndex === null
         ? currentIndex
-        : (currentIndex - 1 + previewImages.length) % previewImages.length
+        : (currentIndex - 1 + galleryImages.length) % galleryImages.length
     ));
   }
 
@@ -184,7 +189,7 @@ export default function BounceCards({
     setLightboxIndex((currentIndex) => (
       currentIndex === null
         ? currentIndex
-        : (currentIndex + 1) % previewImages.length
+        : (currentIndex + 1) % galleryImages.length
     ));
   }
 
@@ -221,11 +226,11 @@ export default function BounceCards({
       onClick={handleClick}
     >
       <div className="bounce-main-frame">
-        <img className="bounce-main-image" src={previewImages[0]} alt={alt} />
+        <img className="bounce-main-image" src={galleryImages[0]} alt={alt} />
       </div>
 
       <div className="bounce-preview-cards" aria-hidden={!isOpen}>
-        {previewImages.map((src, index) => (
+        {galleryImages.map((src, index) => (
           <button
             key={`${src}-${index}`}
             ref={(element) => {
@@ -285,12 +290,12 @@ export default function BounceCards({
             onClick={(event) => event.stopPropagation()}
           >
             <img
-              src={previewImages[lightboxIndex]}
+              src={galleryImages[lightboxIndex]}
               alt={`${alt}: изображение ${lightboxIndex + 1}`}
               className="bounce-lightbox-image"
             />
             <figcaption className="bounce-lightbox-count">
-              {lightboxIndex + 1} / {previewImages.length}
+              {lightboxIndex + 1} / {galleryImages.length}
             </figcaption>
           </figure>
 

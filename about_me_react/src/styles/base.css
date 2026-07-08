@@ -5,10 +5,12 @@
   --bg-deep: #17382F;
   --bg-soft: #2B6251;
   --brown: #2B1A12;
+  --brown-soft: #4A2D20;
   --accent: #B9E5C8;
-  --text: #F3FFF8;
-  --muted: rgba(243, 255, 248, 0.68);
-  --muted-strong: rgba(243, 255, 248, 0.86);
+  --accent-soft: #8FC7A3;
+  --text: #F8FFF9;
+  --muted: rgba(248, 255, 249, 0.76);
+  --muted-strong: rgba(248, 255, 249, 0.92);
   --surface: rgba(43, 26, 18, 0.58);
   --surface-strong: rgba(43, 26, 18, 0.78);
   --brown-surface: rgba(43, 26, 18, 0.72);
@@ -95,6 +97,7 @@ button {
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: 0;
+  color: var(--text);
 }
 
 .section-subtitle {
@@ -127,6 +130,8 @@ button {
 
 .btn:hover {
   transform: translateY(-2px);
+  background: var(--brown-soft);
+  color: var(--text);
   box-shadow: 0 20px 44px rgba(43, 26, 18, 0.42);
 }
 
@@ -173,6 +178,7 @@ button {
   font-size: 22px;
   font-weight: 600;
   line-height: 1.2;
+  color: var(--text);
 }
 
 .card p,

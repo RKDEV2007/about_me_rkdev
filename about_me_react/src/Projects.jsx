@@ -65,7 +65,7 @@ function Projects() {
                 <div className="project-card-image-wrap">
                   <BounceCards
                     className="project-bounceCards"
-                    images={Array(5).fill(project.image)}
+                    images={project.gallery}
                     alt={`Превью: ${project.title}`}
                     containerWidth="100%"
                     containerHeight={222}
