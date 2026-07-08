@@ -1,22 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap");
 
 :root {
-  --bg: #214C40;
-  --bg-deep: #17382F;
-  --bg-soft: #2B6251;
-  --brown: #2B1A12;
-  --brown-soft: #4A2D20;
+  --bg: #281E2A;
+  --bg-deep: #1A121D;
+  --bg-soft: #3B2E3F;
+  --brown: #281E2A;
+  --brown-soft: #3B2E3F;
   --accent: #B9E5C8;
-  --accent-soft: #8FC7A3;
-  --text: #F8FFF9;
-  --muted: rgba(248, 255, 249, 0.76);
-  --muted-strong: rgba(248, 255, 249, 0.92);
-  --surface: rgba(43, 26, 18, 0.58);
-  --surface-strong: rgba(43, 26, 18, 0.78);
-  --brown-surface: rgba(43, 26, 18, 0.72);
+  --accent-soft: #DDF6E6;
+  --accent-deep: #8BC89F;
+  --text: #DDF6E6;
+  --muted: rgba(221, 246, 230, 0.72);
+  --muted-strong: rgba(221, 246, 230, 0.9);
+  --surface: rgba(185, 229, 200, 0.08);
+  --surface-strong: rgba(185, 229, 200, 0.14);
+  --brown-surface: rgba(40, 30, 42, 0.9);
   --line: rgba(185, 229, 200, 0.18);
-  --line-strong: rgba(185, 229, 200, 0.34);
-  --shadow: 0 24px 70px rgba(43, 26, 18, 0.34);
+  --line-strong: rgba(185, 229, 200, 0.38);
+  --shadow: 0 24px 70px rgba(12, 8, 14, 0.36);
   --radius: 8px;
   --container: 1180px;
   --header-height: 76px;
@@ -40,8 +41,8 @@ html {
 body {
   color: var(--text);
   background:
-    linear-gradient(180deg, rgba(185, 229, 200, 0.12) 0%, rgba(33, 76, 64, 0) 380px),
-    linear-gradient(135deg, var(--bg-soft) 0%, var(--bg) 42%, var(--bg-deep) 100%),
+    linear-gradient(180deg, rgba(185, 229, 200, 0.11) 0%, rgba(185, 229, 200, 0) 420px),
+    linear-gradient(135deg, var(--bg-soft) 0%, var(--bg) 48%, var(--bg-deep) 100%),
     var(--bg);
   font-family: var(--font-text);
   line-height: 1.62;
@@ -113,11 +114,11 @@ button {
   justify-content: center;
   min-height: 48px;
   padding: 13px 22px;
-  border: 1px solid rgba(185, 229, 200, 0.24);
+  border: 1px solid rgba(185, 229, 200, 0.28);
   border-radius: var(--radius);
-  background: var(--brown);
-  color: var(--accent);
-  box-shadow: 0 16px 36px rgba(43, 26, 18, 0.34);
+  background: var(--accent);
+  color: var(--brown);
+  box-shadow: 0 16px 36px rgba(12, 8, 14, 0.28);
   cursor: pointer;
   font-weight: 800;
   line-height: 1.2;
@@ -130,9 +131,9 @@ button {
 
 .btn:hover {
   transform: translateY(-2px);
-  background: var(--brown-soft);
-  color: var(--text);
-  box-shadow: 0 20px 44px rgba(43, 26, 18, 0.42);
+  background: var(--accent-soft);
+  color: var(--brown);
+  box-shadow: 0 20px 44px rgba(12, 8, 14, 0.36);
 }
 
 .btn-secondary {
@@ -141,7 +142,8 @@ button {
 }
 
 .btn-secondary:hover {
-  background: rgba(43, 26, 18, 0.42);
+  background: rgba(185, 229, 200, 0.1);
+  color: var(--accent-soft);
 }
 
 .card,
@@ -168,7 +170,7 @@ button {
   transform: translateY(-3px);
   border-color: var(--line-strong);
   background: var(--surface-strong);
-  box-shadow: 0 26px 74px rgba(43, 26, 18, 0.42);
+  box-shadow: 0 26px 74px rgba(12, 8, 14, 0.42);
 }
 
 .card h3,

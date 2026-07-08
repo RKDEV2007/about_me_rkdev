@@ -21,7 +21,7 @@
 .modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(23, 56, 47, 0.82);
+  background: rgba(40, 30, 42, 0.78);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -32,6 +32,7 @@
   max-height: 90vh;
   overflow-y: auto;
   background: var(--brown);
+  color: var(--accent);
   transform: scale(0.97);
   transition: transform 0.24s ease;
 }
@@ -47,9 +48,9 @@
   z-index: 1;
   width: 42px;
   height: 42px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(185, 229, 200, 0.28);
   border-radius: var(--radius);
-  background: rgba(43, 26, 18, 0.62);
+  background: rgba(185, 229, 200, 0.1);
   cursor: pointer;
   transition:
     background 0.2s ease,
@@ -57,8 +58,8 @@
 }
 
 .modal-close:hover {
-  border-color: var(--line-strong);
-  background: rgba(43, 26, 18, 0.82);
+  border-color: rgba(185, 229, 200, 0.46);
+  background: rgba(185, 229, 200, 0.18);
 }
 
 .modal-close::before,
@@ -96,11 +97,16 @@
   font-size: 30px;
   font-weight: 700;
   line-height: 1.14;
+  color: var(--accent-soft);
+}
+
+.modal-project .project-tag {
+  color: var(--accent);
 }
 
 .modal-project-desc {
   margin-bottom: 18px;
-  color: var(--muted);
+  color: rgba(185, 229, 200, 0.76);
 }
 
 .modal-project .project-links {
@@ -109,4 +115,22 @@
 
 .modal-project .project-links a {
   text-decoration: none;
+}
+
+.modal-project .project-links a.btn {
+  color: var(--brown);
+}
+
+.modal-project .project-links a.btn-secondary {
+  color: var(--accent);
+}
+
+.modal-project .project-links a.btn-secondary:hover {
+  color: var(--accent-soft);
+}
+
+.modal-project .project-tags-inline span {
+  border-color: rgba(185, 229, 200, 0.24);
+  background: rgba(185, 229, 200, 0.1);
+  color: rgba(185, 229, 200, 0.9);
 }

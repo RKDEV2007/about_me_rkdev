@@ -19,7 +19,7 @@
   transform: translateY(-4px);
   border-color: var(--line-strong);
   background: var(--surface-strong);
-  box-shadow: 0 28px 80px rgba(43, 26, 18, 0.42);
+  box-shadow: 0 28px 80px rgba(12, 8, 14, 0.42);
 }
 
 .project-card-clickable {
@@ -58,7 +58,7 @@
   padding: 6px 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(43, 26, 18, 0.46);
+  background: rgba(185, 229, 200, 0.08);
   color: var(--muted-strong);
   font-size: 12px;
   font-weight: 800;
@@ -83,7 +83,7 @@
 }
 
 .project-links a:hover {
-  color: var(--text);
+  color: var(--accent-soft);
   text-decoration-color: var(--accent);
 }
 

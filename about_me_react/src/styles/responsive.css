@@ -47,7 +47,7 @@
     padding: 18px;
     border: 1px solid rgba(185, 229, 200, 0.28);
     border-radius: var(--radius);
-    background: rgba(23, 56, 47, 0.98);
+    background: rgba(40, 30, 42, 0.98);
   }
 
   .nav-menu.active {
