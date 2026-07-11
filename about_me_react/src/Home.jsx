@@ -95,7 +95,10 @@ function Home({ goToProjects }) {
           </div>
 
           <div className="hero-card">
-            <img src="/images/profile.jpg" alt="Фото разработчика" className="hero-image" />
+            <picture>
+              <source srcSet="/images/profile.webp" type="image/webp" />
+              <img src="/images/profile.jpg" alt="Фото разработчика" className="hero-image" />
+            </picture>
             <div className="hero-card-info">
               <span>RKDEV</span>
               <h3>Роман Карпов</h3>

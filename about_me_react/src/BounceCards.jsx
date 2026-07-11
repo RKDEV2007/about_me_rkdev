@@ -15,6 +15,10 @@ function toCssSize(value) {
   return typeof value === "number" ? `${value}px` : value;
 }
 
+function toWebpSrc(src) {
+  return src.replace(/\.(jpe?g|png)$/i, ".webp");
+}
+
 export default function BounceCards({
   className = "",
   images = [],
@@ -226,7 +230,10 @@ export default function BounceCards({
       onClick={handleClick}
     >
       <div className="bounce-main-frame">
-        <img className="bounce-main-image" src={galleryImages[0]} alt={alt} />
+        <picture>
+          <source srcSet={toWebpSrc(galleryImages[0])} type="image/webp" />
+          <img className="bounce-main-image" src={galleryImages[0]} alt={alt} loading="lazy" />
+        </picture>
       </div>
 
       <div className="bounce-preview-cards" aria-hidden={!isOpen}>
@@ -246,7 +253,10 @@ export default function BounceCards({
             }}
             onClick={(event) => openLightbox(index, event)}
           >
-            <img className="bounce-card-image" src={src} alt="" />
+            <picture>
+              <source srcSet={toWebpSrc(src)} type="image/webp" />
+              <img className="bounce-card-image" src={src} alt="" loading="lazy" />
+            </picture>
           </button>
         ))}
       </div>
@@ -289,11 +299,15 @@ export default function BounceCards({
             onPointerDown={(event) => event.stopPropagation()}
             onClick={(event) => event.stopPropagation()}
           >
-            <img
-              src={galleryImages[lightboxIndex]}
-              alt={`${alt}: изображение ${lightboxIndex + 1}`}
-              className="bounce-lightbox-image"
-            />
+            <picture>
+              <source srcSet={toWebpSrc(galleryImages[lightboxIndex])} type="image/webp" />
+              <img
+                src={galleryImages[lightboxIndex]}
+                alt={`${alt}: изображение ${lightboxIndex + 1}`}
+                className="bounce-lightbox-image"
+                loading="lazy"
+              />
+            </picture>
             <figcaption className="bounce-lightbox-count">
               {lightboxIndex + 1} / {galleryImages.length}
             </figcaption>
