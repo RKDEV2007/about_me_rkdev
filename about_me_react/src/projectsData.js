@@ -7,13 +7,12 @@ const projectsData = [
     tag: "Education Website",
     tags: ["HTML", "CSS", "JavaScript"],
     description: "Структурированный сайт с программой занятий, преимуществами, анимацией и понятным путем к записи.",
-    image: "/images/english.jpg",
     gallery: [
-      "/images/english.jpg",
-      "/images/english.jpg",
-      "/images/english.jpg",
-      "/images/english.jpg",
-      "/images/english.jpg"
+      "/images/english/eng1.png",
+      "/images/english/eng2.png",
+      "/images/english/eng3.png",
+      "/images/english/eng4.png",
+      "/images/english/eng5.png"
     ],
     demo: "https://rkdev2007.github.io/english-tutor/",
     github: "https://github.com/RKDEV2007/english-tutor"
@@ -24,13 +23,12 @@ const projectsData = [
     tag: "Business Website",
     tags: ["Frontend", "UI", "Adaptive"],
     description: "Адаптивная презентация кофейни с меню, галереей, атмосферными карточками и контактным блоком.",
-    image: "/images/kofee.jpg",
     gallery: [
-      "/images/kofee.jpg",
-      "/images/kofee.jpg",
-      "/images/kofee.jpg",
-      "/images/kofee.jpg",
-      "/images/kofee.jpg"
+      "/images/cofshop/kofee.jpg",
+      "/images/cofshop/kofee2.png",
+      "/images/cofshop/kofee3.png",
+      "/images/cofshop/kofee4.png",
+      "/images/cofshop/kofee5.png"
     ],
     demo: "https://rkdev2007.github.io/coffee-shop/",
     github: "https://github.com/RKDEV2007/coffee-shop.git"
@@ -41,7 +39,6 @@ const projectsData = [
     tag: "Service Landing",
     tags: ["Landing", "CSS Grid", "Conversion"],
     description: "Посадочная страница для услуги с акцентом на доверие, список работ, преимущества и быстрый контакт.",
-    image: "/images/phone.jpg",
     gallery: [
       "/images/phone.jpg",
       "/images/phone.jpg",
@@ -58,7 +55,6 @@ const projectsData = [
     tag: "Productivity App",
     tags: ["React", "State", "Planning"],
     description: "Планировщик недели с задачами, удалением, генерацией расписания и индикатором ресурса.",
-    image: "/images/weekplan.png",
     gallery: [
       "/images/weekplan.png",
       "/images/weekplan.png",
@@ -75,7 +71,6 @@ const projectsData = [
     tag: "Finance App",
     tags: ["React", "CRUD", "Dashboard"],
     description: "Приложение для учета транзакций с добавлением, редактированием, удалением и визуальной структурой расходов.",
-    image: "/images/finance.jpg",
     gallery: [
       "/images/finance.jpg",
       "/images/finance.jpg",
@@ -92,7 +87,6 @@ const projectsData = [
     tag: "Business Website",
     tags: ["Landing", "UI", "Adaptive"],
     description: "Лендинг с витриной категорий, продающей структурой и визуальным акцентом на технологичный продукт.",
-    image: "/images/neon.jpg",
     gallery: [
       "/images/neon.jpg",
       "/images/neon.jpg",
@@ -109,7 +103,6 @@ const projectsData = [
     tag: "Medical Website",
     tags: ["Multipage", "Frontend", "Services"],
     description: "Сайт клиники с несколькими страницами, описанием услуг, навигацией и аккуратной информационной подачей.",
-    image: "/images/clinik.jpg",
     gallery: [
       "/images/clinik.jpg",
       "/images/clinik.jpg",
@@ -126,7 +119,6 @@ const projectsData = [
     tag: "Portfolio Landing",
     tags: ["Portfolio", "Landing", "Frontend"],
     description: "Страница для специалиста с услугами, портфолио, отзывами и понятной формой заявки.",
-    image: "/images/photo.jpg",
     gallery: [
       "/images/photo.jpg",
       "/images/photo.jpg",
@@ -143,7 +135,6 @@ const projectsData = [
     tag: "Personal Website",
     tags: ["Education", "Landing", "Frontend"],
     description: "Лендинг с описанием занятий, преимуществами, отзывами и быстрым переходом к записи.",
-    image: "/images/tutor.jpg",
     gallery: [
       "/images/tutor.jpg",
       "/images/tutor.jpg",
@@ -160,7 +151,6 @@ const projectsData = [
     tag: "Business Website",
     tags: ["Landing", "Frontend"],
     description: "Лендинг модного магазина одежды с простым интерфейсом.",
-    image: "/images/atelier.jpg",
     gallery: [
       "/images/atelier.jpg",
       "/images/atelier.jpg",
@@ -177,7 +167,6 @@ const projectsData = [
     tag: "Business Website",
     tags: ["Landing", "Frontend", "UI"],
     description: "Лендинг премиального магазина техники с простым интерфейсом и анимацией.",
-    image: "/images/luxteck.jpg",
     gallery: [
       "/images/luxteck.jpg",
       "/images/luxteck.jpg",
