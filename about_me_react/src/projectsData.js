@@ -40,11 +40,11 @@ const projectsData = [
     tags: ["Landing", "CSS Grid", "Conversion"],
     description: "Посадочная страница для услуги с акцентом на доверие, список работ, преимущества и быстрый контакт.",
     gallery: [
-      "/images/phone.jpg",
-      "/images/phone.jpg",
-      "/images/phone.jpg",
-      "/images/phone.jpg",
-      "/images/phone.jpg"
+      "/images/repair/phone.jpg",
+      "/images/repair/phone2.png",
+      "/images/repair/phone3.png",
+      "/images/repair/phone4.png",
+      "/images/repair/phone5.png"
     ],
     demo: "https://rkdev2007.github.io/phone-repair/",
     github: "https://github.com/RKDEV2007/phone-repair.git"
@@ -56,11 +56,12 @@ const projectsData = [
     tags: ["React", "State", "Planning"],
     description: "Планировщик недели с задачами, удалением, генерацией расписания и индикатором ресурса.",
     gallery: [
-      "/images/weekplan.png",
-      "/images/weekplan.png",
-      "/images/weekplan.png",
-      "/images/weekplan.png",
-      "/images/weekplan.png"
+      "/images/weekplan/weekplan.png",
+      "/images//weekplan/weekplan1.png",
+      "/images/weekplan/weekplan2.png",
+      "/images/weekplan/weekplan3.png",
+      "/images/weekplan/weekplan4.png"
+
     ],
     demo: "https://week-plan-gamma.vercel.app",
     github: "https://github.com/RKDEV2007/WeekPlan"
@@ -72,11 +73,11 @@ const projectsData = [
     tags: ["React", "CRUD", "Dashboard"],
     description: "Приложение для учета транзакций с добавлением, редактированием, удалением и визуальной структурой расходов.",
     gallery: [
-      "/images/finance.jpg",
-      "/images/finance.jpg",
-      "/images/finance.jpg",
-      "/images/finance.jpg",
-      "/images/finance.jpg"
+      "/images/finance/finance.jpg",
+      "/images/finance/finance2.png",
+      "/images/finance/finance3.png",
+      "/images/finance/finance4.png",
+      "/images/finance/finance5.png"
     ],
     demo: "https://money-s-steel.vercel.app",
     github: "https://github.com/RKDEV2007/Money-s"
@@ -88,11 +89,11 @@ const projectsData = [
     tags: ["Landing", "UI", "Adaptive"],
     description: "Лендинг с витриной категорий, продающей структурой и визуальным акцентом на технологичный продукт.",
     gallery: [
-      "/images/neon.jpg",
-      "/images/neon.jpg",
-      "/images/neon.jpg",
-      "/images/neon.jpg",
-      "/images/neon.jpg"
+      "/images/neonshop/neon.jpg",
+      "/images/neonshop/neon2.png",
+      "/images/neonshop/neon3.png",
+      "/images/neonshop/neon4.png",
+      "/images/neonshop/neon5.png"
     ],
     demo: "https://rkdev2007.github.io/neon-shop/",
     github: "https://github.com/RKDEV2007/neon-shop"
@@ -104,11 +105,11 @@ const projectsData = [
     tags: ["Multipage", "Frontend", "Services"],
     description: "Сайт клиники с несколькими страницами, описанием услуг, навигацией и аккуратной информационной подачей.",
     gallery: [
-      "/images/clinik.jpg",
-      "/images/clinik.jpg",
-      "/images/clinik.jpg",
-      "/images/clinik.jpg",
-      "/images/clinik.jpg"
+      "/images/medical/clinik.png",
+      "/images/medical/clinik2.png",
+      "/images/medical/clinik3.png",
+      "/images/medical/clinik4.png",
+      "/images/medical/clinik5.png"
     ],
     demo: "https://rkdev2007.github.io/meridian-clinik/",
     github: "https://github.com/RKDEV2007/meridian-clinik"
@@ -120,11 +121,11 @@ const projectsData = [
     tags: ["Portfolio", "Landing", "Frontend"],
     description: "Страница для специалиста с услугами, портфолио, отзывами и понятной формой заявки.",
     gallery: [
-      "/images/photo.jpg",
-      "/images/photo.jpg",
-      "/images/photo.jpg",
-      "/images/photo.jpg",
-      "/images/photo.jpg"
+      "/images/photo/photo.jpg",
+      "/images/photo/photo2.png",
+      "/images/photo/photo3.png",
+      "/images/photo/photo4.png",
+      "/images/photo/photo5.png"
     ],
     demo: "https://rkdev2007.github.io/photo-man/",
     github: "https://github.com/RKDEV2007/photo-man.git"
@@ -136,11 +137,11 @@ const projectsData = [
     tags: ["Education", "Landing", "Frontend"],
     description: "Лендинг с описанием занятий, преимуществами, отзывами и быстрым переходом к записи.",
     gallery: [
-      "/images/tutor.jpg",
-      "/images/tutor.jpg",
-      "/images/tutor.jpg",
-      "/images/tutor.jpg",
-      "/images/tutor.jpg"
+      "/images/tutor/tutor.jpg",
+      "/images/tutor/tutor2.png",
+      "/images/tutor/tutor3.png",
+      "/images/tutor/tutor4.png",
+      "/images/tutor/tutor5.png"
     ],
     demo: "https://rkdev2007.github.io/tutor-school/",
     github: "https://github.com/RKDEV2007/tutor-school.git"
@@ -152,11 +153,11 @@ const projectsData = [
     tags: ["Landing", "Frontend"],
     description: "Лендинг модного магазина одежды с простым интерфейсом.",
     gallery: [
-      "/images/atelier.jpg",
-      "/images/atelier.jpg",
-      "/images/atelier.jpg",
-      "/images/atelier.jpg",
-      "/images/atelier.jpg"
+      "/images/clothes/atelier.jpg",
+      "/images/clothes/atelier2.png",
+      "/images/clothes/atelier3.png",
+      "/images/clothes/atelier4.png",
+      "/images/clothes/atelier5.png"
     ],
     demo: "https://rkdev2007.github.io/clothes_shop/",
     github: "https://github.com/RKDEV2007/clothes_shop"
@@ -168,11 +169,11 @@ const projectsData = [
     tags: ["Landing", "Frontend", "UI"],
     description: "Лендинг премиального магазина техники с простым интерфейсом и анимацией.",
     gallery: [
-      "/images/luxteck.jpg",
-      "/images/luxteck.jpg",
-      "/images/luxteck.jpg",
-      "/images/luxteck.jpg",
-      "/images/luxteck.jpg"
+      "/images/lux/luxteck.jpg",
+      "/images/lux/luxteck2.png",
+      "/images/lux/luxteck3.png",
+      "/images/lux/luxteck4.png",
+      "/images/lux/luxteck5.png"
     ],
     demo: "https://rkdev2007.github.io/premium_sel_tech/index.html",
     github: "https://github.com/RKDEV2007/premium_sel_tech"
