@@ -9,8 +9,22 @@ function App() {
   useEffect(() => {
     if (page === "projects") {
       document.body.classList.add("page-projects");
+      document.title = "Проекты | RKDEV — примеры сайтов и React-приложений";
+      document
+        .querySelector('meta[name="description"]')
+        ?.setAttribute(
+          "content",
+          "Подборка проектов RKDEV: лендинги, сайты-визитки и React-приложения с демо и исходным кодом на GitHub."
+        );
     } else {
       document.body.classList.remove("page-projects");
+      document.title = "RKDEV | Роман Карпов — Frontend-разработчик, лендинги и React-сайты";
+      document
+        .querySelector('meta[name="description"]')
+        ?.setAttribute(
+          "content",
+          "Роман Карпов (RKDEV) — frontend-разработчик: лендинги для малого бизнеса и специалистов, сайты-визитки, верстка по Figma, React-приложения. Портфолио и цены."
+        );
     }
   }, [page]);
 

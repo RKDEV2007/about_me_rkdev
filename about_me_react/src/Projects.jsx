@@ -114,7 +114,11 @@ function Projects() {
           <div className="modal-body">
             {activeProject && (
               <div className="modal-project">
-                <img src={activeProject.image} alt="" className="modal-project-image" />
+                <img
+                  src={activeProject.gallery[0]}
+                  alt={`Превью проекта: ${activeProject.title}`}
+                  className="modal-project-image"
+                />
                 <span className="project-tag">{activeProject.tag}</span>
                 <h2 className="modal-project-title">{activeProject.title}</h2>
                 <p className="modal-project-desc">{activeProject.description}</p>
