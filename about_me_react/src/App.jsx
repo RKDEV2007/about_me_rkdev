@@ -18,12 +18,12 @@ function App() {
         );
     } else {
       document.body.classList.remove("page-projects");
-      document.title = "RKDEV | Роман Карпов — Frontend-разработчик, лендинги и React-сайты";
+      document.title = "Роман Карпов (RKDEV) — программист, frontend-разработчик | Заказать сайт, лендинг, сайт-визитку";
       document
         .querySelector('meta[name="description"]')
         ?.setAttribute(
           "content",
-          "Роман Карпов (RKDEV) — frontend-разработчик: лендинги для малого бизнеса и специалистов, сайты-визитки, верстка по Figma, React-приложения. Портфолио и цены."
+          "Роман Карпов (RKDEV) — программист и frontend-разработчик. Заказать сайт под ключ: лендинги, сайты-визитки, верстка по Figma и React-приложения для малого бизнеса и специалистов. Портфолио, цены от 6000 руб., связь в Telegram."
         );
     }
   }, [page]);
